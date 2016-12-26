@@ -1,4 +1,4 @@
-FROM medicean/vulapps:base_lamp
+FROM yiwang666/lamp
 MAINTAINER Medici.Yan <Medici.Yan@Gmail.com>
 
 COPY src/dedecms.zip /tmp/dedecms.zip
