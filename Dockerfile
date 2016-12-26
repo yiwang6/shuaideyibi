@@ -1,4 +1,4 @@
-FROM medicean/vulapps:base_lamp
+FROM yiwang666/lamp
 MAINTAINER Medici.Yan <Medici.Yan@Gmail.com>
 
 COPY src/dedecms.zip /tmp/dedecms.zip
@@ -13,8 +13,8 @@ RUN set -x \
     && rm -rf /var/www/html/* \
     && unzip -x /tmp/dedecms.zip \
     && unzip -x /tmp/install.zip \
-    && cp -r /tmp/upload/* /var/www/html/ \
-    && cp -r /tmp/install/* /var/www/html/ \
+    && cp -r /tmp/* /var/www/html/ \
+    && cp -r /tmp/* /var/www/html/ \
     && /etc/init.d/mysql start \
     && mysql -e "CREATE DATABASE dedecms DEFAULT CHARACTER SET utf8;" -uroot -p \
     && mysql -e "use dedecms;source /tmp/dedecms.sql;" -uroot -p \
