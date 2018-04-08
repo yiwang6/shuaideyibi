@@ -1,4 +1,4 @@
-FROM yiwang666/lamp
+FROM registry.cn-hangzhou.aliyuncs.com/lamp_old/lamp
 MAINTAINER Medici.Yan <Medici.Yan@Gmail.com>
 
 COPY src/dedecms.zip /tmp/dedecms.zip
